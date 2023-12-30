@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PigeonServer MC服务器</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E5F8FF;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            text-align: center;
+            padding: 80px 0 60px;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+
+        .header h1 {
+            color: #ffffff;
+            font-size: 48px;
+            margin: 0;
+            padding: 0;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px;
+            background-color: #ffffff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        .server-info {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+
+        .info-block {
+            width: calc(33.33% - 20px);
+            text-align: center;
+            border: 2px solid #A9D5DE;
+            border-radius: 8px;
+            padding: 20px;
+            background-color: #D6EAF8;
+            transition: transform 0.3s ease;
+            margin-right: 20px;
+            margin-left: 20px;
+        }
+
+
+        .info-block:hover {
+            transform: translateY(-5px);
+        }
+
+        .info-block h2 {
+            color: #333333;
+            font-size: 24px;
+            margin-top: 0;
+            margin-bottom: 20px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+
+        .info-block p {
+            color: #666666;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        
+        .info-block ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+        }
+
+        .info-block li {
+            color: #333333;
+            font-size: 18px;
+            margin-bottom: 10px;
+            text-align: left;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .info-block li:before {
+            content: "●";
+            color: #4CAF50;
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 20px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background-color: #2196F3;
+            color: #ffffff;
+            font-size: 20px;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            background-color: #0D47A1;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>欢迎来到PigeonServer MC服务器</h1>
+    </div>
+
+    <div class="content">
+        <div class="server-info">
+            <div class="info-block">
+                <h2>服务器IP</h2>
+                <h4>主线IP:</h4>
+                <p>mc.pigeonserver.xyz:33333</p>
+                <h4>备用IP:</h4>
+                <p>mc.pigeonserver.xyz:33333</p>
+            </div>
+
+            <div class="info-block">
+                <h2>服务器版本</h2>
+                <p>1.20.x</p>
+                <p>（兼容旧版）</p>
+            </div>
+
+            <div class="info-block">
+                <h2>服务器规则</h2>
+                <ul>
+                    <li>禁止作弊</li>
+                    <li>禁止恶语、恶习</li>
+                    <li>友好、公平游玩</li>
+                </ul>
+            </div>
+        </div>
+
+        <p><a href="#" class="cta-button">加入游戏吧！</a></p>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.4.2/gsap.min.js"></script>
+    <script>
+        gsap.from(".header", {
+            opacity: 0,
+            y: -50,
+            duration: 1,
+            ease: "power4.out"
+        });
+
+        gsap.from(".server-info", {
+            opacity: 0,
+            x: -100,
+            stagger: 0.3,
+            duration: 1.5,
+            delay: 0.5
+        });
+
+        gsap.from(".cta-button", {
+            opacity: 0,
+            scale: 0,
+            duration: 1,
+            delay: 1,
+            ease: "elastic.out(1, 0.8)"
+        });
+    </script>
+    <footer style="background-color: #E5F8FF; padding: 20px; text-align: center;">
+        <p style="color: #666666;">© 2023 PigeonServer MC服务器. All rights reserved.</p>
+    </footer>    
+</body>
+</html>
+<!--夜间模式、footer、按钮事件
